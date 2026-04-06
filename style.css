@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body, button
+{
+    font-family: "Open Sans", Arial;
+}
+
+body
+{
+    margin: 0px;
+}
+
+.page-title
+{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+
+.under-page-title
+{
+    text-align: center;
+}
+
+.options-grid
+{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 20px;
+    text-align: center;
+
+    div
+    {
+        background-color: #eee;
+        margin: 10px;
+    }
+}
+
+.do-now
+{
+    background-color: rgb(173, 245, 173);
+    border: none;
+
+    :hover
+    {
+        background-color: rgb(161, 64, 64);
+    }
+}
+
+.toolbar
+{
+    background-color: dodgerblue;
+    margin: 0px;
+    padding: 25px;
+
+    :hover
+    {
+        background-color: gainsboro;
+    }
+
+    :active
+    {
+        background-color: darkgrey;
+    }
+
+    button
+    {
+        display: flex;
+        padding: 15px;
+        border: 0px;
+        align-items: center;
+
+        i
+        {
+            font-size: large;
+            margin-right: 10px;
+        }
+    }
+}
+
+.main-page
+{
+    margin: 10px;
+}
