@@ -38,13 +38,42 @@ body
 
 .do-now
 {
-    background-color: rgb(173, 245, 173);
-    border: none;
+    background-color: rgb(133, 221, 133);
+    border: 0px;
+    padding: 20px;
+    margin: 30px;
+}
 
-    :hover
-    {
-        background-color: rgb(161, 64, 64);
-    }
+.do-now:hover
+{
+    background-color: rgb(78, 190, 78)!important;
+}
+
+.do-now:active
+{
+    background-color: rgb(42, 124, 42)!important;
+    color: white;
+}
+
+.option-title
+{
+    margin-top: 30px;
+    font-size: xx-large;
+}
+
+.option-block
+{
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px;
+    position: relative;
+    top: 0px;
+    transition: 0.2s;
+}
+
+.option-block:hover
+{
+    top: -10px;
 }
 
 .toolbar
