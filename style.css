@@ -1,113 +1,173 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-body, button
-{
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body,
+button {
     font-family: "Open Sans", Arial;
 }
 
-body
-{
+body {
     margin: 0px;
 }
 
-.page-title
-{
+.page-title {
     text-align: center;
     font-size: 50px;
     margin-bottom: 0px;
 }
 
-.under-page-title
-{
+.under-page-title {
     text-align: center;
 }
 
-.options-grid
-{
+.options-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     padding: 20px;
-    text-align: center;
+    /* text-align: center; */
 
-    div
-    {
+    div {
         background-color: #eee;
         margin: 10px;
     }
 }
 
-.do-now
-{
+.do-now {
     background-color: rgb(133, 221, 133);
     border: 0px;
     padding: 20px;
     margin: 30px;
 }
 
-.do-now:hover
-{
-    background-color: rgb(78, 190, 78)!important;
+.do-now:hover {
+    background-color: rgb(78, 190, 78) !important;
 }
 
-.do-now:active
-{
-    background-color: rgb(42, 124, 42)!important;
+.do-now:active {
+    background-color: rgb(42, 124, 42) !important;
     color: white;
 }
 
-.option-title
-{
+.option-title {
     margin-top: 30px;
     font-size: xx-large;
+    font-weight: bold;
 }
 
-.option-block
-{
+.option-block {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 20px;
     position: relative;
     top: 0px;
     transition: 0.2s;
+    overflow: auto;
+    text-align: center;
 }
 
-.option-block:hover
-{
+.option-block:hover {
     top: -10px;
 }
 
-.toolbar
-{
-    background-color: dodgerblue;
-    margin: 0px;
-    padding: 25px;
+.popup-box {
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px;
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    background-color: #eee;
+    margin: 100px 300px 100px 300px;
+    animation: 0.3s linear fadein;
 
-    :hover
-    {
+    .option-title {
+        text-align: center;
+        font-size: 50px;
+    }
+}
+
+.buttons-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    div {
+        background-color: #eee;
+        margin: 10px;
+    }
+}
+
+.cover-page {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+    position: fixed;
+    background-color: #eee5;
+    animation: 0.3s linear fadein;
+}
+
+.toolbar {
+    background-color: dodgerblue;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+
+    :hover {
         background-color: gainsboro;
     }
 
-    :active
-    {
+    :active {
         background-color: darkgrey;
     }
 
-    button
-    {
+    button {
         display: flex;
         padding: 15px;
         border: 0px;
         align-items: center;
 
-        i
-        {
+        i {
             font-size: large;
             margin-right: 10px;
         }
     }
 }
 
-.main-page
-{
-    margin: 10px;
+.main-page {
+    margin: 150px 10px 10px 10px;
+}
+
+.lets-go-button {
+    border: 0px;
+    background-color: rgb(133, 221, 133);
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.lets-go-button:hover {
+    background-color: rgb(78, 190, 78)
+}
+
+.lets-go-button:active {
+    background-color: rgb(42, 124, 42);
+    color: white;
 }
